@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  hospital-mdp-app:
+    build: .
+    container_name: hospital_mdp_optimizer
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    environment:
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
